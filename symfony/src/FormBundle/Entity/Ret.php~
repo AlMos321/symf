@@ -1,0 +1,55 @@
+<?php
+
+namespace FormBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ret
+ *
+ * @ORM\Table()
+ * @ORM\Entity
+ */
+class Ret
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Type("\DateTime")
+     */
+
+    /**
+     * @ORM\Column(name= "token", type="date")
+     */
+
+    protected $token;
+
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    public function setToken(\DateTime $token = null)
+    {
+        $this->$token = $token;
+    }
+
+
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+}

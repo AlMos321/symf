@@ -1,0 +1,26 @@
+form:
+    resource: "@FormBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+acme_store:
+    resource: "@AcmeStoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+test:
+    resource: "@TestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+name:
+    resource: "@NameBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+first:
+    resource: "@FirstBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+
+

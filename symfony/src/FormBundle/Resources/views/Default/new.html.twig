@@ -1,0 +1,49 @@
+{# app/Resources/views/Default/snew.html.twig #}
+{# app/Resources/views/Default/new.html.twig #}
+
+{#
+
+{{ form_start(form) }}
+    {{ form_errors(form) }}
+
+<div>
+    {{ form_label(form.task,'Task Description') }}
+    {{ form_errors(form.task) }}
+    {{ form_widget(form.task) }}
+</div>
+
+<div>
+    {{ form_label(form.dueDate) }}
+    {{ form_errors(form.dueDate) }}
+    {{ form_widget(form.dueDate) }}
+</div>
+
+
+
+<div>
+    {{ form_widget(form.save) }}
+</div>
+
+{{ form_end(form) }}
+
+
+
+#}
+
+<style type="text/css">
+    .foo {
+        font-size: 120%;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        color: #333366;
+    }
+</style>
+
+
+
+
+{{ form_start(form) }}
+{{ form.task.vars.full_name }}
+{{ form_row(form.task, {'label': 'foo '}) }}
+{{ form_row(form.task, {'label': 'foo'}) }}
+{{ form_widget(form.dueDate, {'attr': {'class': 'foo'}}) }}
+{{ form_end(form) }}
